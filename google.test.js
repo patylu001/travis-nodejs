@@ -1,3 +1,10 @@
+import webdriver from 'selenium-webdriver';
+import chrome from 'selenium-webdriver/chrome';
+import chromedriver from 'chromedriver';
+
+
+
+
 const fs = require('fs');
 describe('test google.com', () => {
     const {
@@ -9,9 +16,11 @@ describe('test google.com', () => {
     var driver;
  
     beforeEach(() => {
-        driver = new Builder()
-            .forBrowser('chrome')
-            .build();
+
+	chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
+        driver = new iwebdriver.Builder()
+		 .withCapabilities(webdriver.Capabilities.chrome())
+                 .build();
     });
  
     afterEach(() => {
