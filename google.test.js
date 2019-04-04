@@ -1,8 +1,6 @@
-import webdriver from 'selenium-webdriver';
-import chrome from 'selenium-webdriver/chrome';
-import chromedriver from 'chromedriver';
-
-
+let webdriver = require('selenium-webdriver');
+let chrome = require('selenium-webdriver/chrome');
+let chromedriver = require('chromedriver');
 
 
 const fs = require('fs');
@@ -18,7 +16,7 @@ describe('test google.com', () => {
     beforeEach(() => {
 
 	chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
-        driver = new iwebdriver.Builder()
+        driver = new webdriver.Builder()
 		 .withCapabilities(webdriver.Capabilities.chrome())
                  .build();
     });
