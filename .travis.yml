@@ -7,8 +7,6 @@ cache:
     - "node_modules"
 install:
   - npm install
-before_script: xvfb-run --server-args="-screen 0 1024x768x24" 
+before_script: npm install selenium-webdriver
 script:
-  # run unit tests
-  - npm install selenium-webdriver
-  - npm test
+	xvfb-run --server-args="-screen 0 1024x768x24" npm test
