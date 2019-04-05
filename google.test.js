@@ -43,7 +43,8 @@ describe('test google.com', () => {
         driver
             .getTitle()
             .then(title => {
-                expect(title).toEqual('selenium - Buscar con Google');
+                //expect(title).toEqual('selenium - Buscar con Google');
+                expect(title).toEqual('selenium - Google search');
             });
     });
  
