@@ -20,3 +20,5 @@ before_script:
   - sleep 3
 script:
   - npm test
+
+after_script: ls 
