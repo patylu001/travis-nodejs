@@ -20,7 +20,5 @@ before_script:
   - sleep 3
 script:
   - npm test
-
-after_script: 
-	- echo "Done"
-	- ls 
+  - echo "Done"
+  - ls 
